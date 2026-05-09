@@ -71,10 +71,10 @@ model.to(device)
 
 # Provide the list of paths to your chosen videos her
 videos = [
-        'walking-persons',
+        'skydiving',
         'far-away',
         'occlusion-example',
-        'skydiving',
+        'walking-persons',
         'yoga']
 
 file_name = videos[0] + '.mp4'
