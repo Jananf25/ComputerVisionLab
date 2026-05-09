@@ -71,10 +71,14 @@ model.to(device)
 
 # Provide the list of paths to your chosen videos her
 videos = [
+        'walking-persons',
+        'far-away',
+        'occlusion-example',
         'skydiving',
-        'far-away']
+        'yoga']
 
 file_name = videos[0] + '.mp4'
+save_name = videos[0]
 vid_path = '../media/' + file_name
 
 cap = cv2.VideoCapture(vid_path)
@@ -87,8 +91,12 @@ h, w, _ = frame.shape
 #                       cv2.VideoWriter_fourcc(*'mp4v'), 
 #                       fps, (w, h))
 
-out = cv2.VideoWriter(f"{save_name}_yolo7.avi",cv2.VideoWriter_fourcc('M','J','P','G'), 10, w,h)
-
+out = cv2.VideoWriter(
+    f"{save_name}_yolov7.avi",
+    cv2.VideoWriter_fourcc('M','J','P','G'),
+    10,
+    (256, 256)
+)
 #-------------------------------------------------------------------------------#
 
 
